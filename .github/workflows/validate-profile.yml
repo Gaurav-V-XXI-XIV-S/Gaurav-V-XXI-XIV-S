@@ -1,0 +1,56 @@
+name: Validate Profile
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate YAML workflows
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          file_or_dir: .github/workflows
+
+      - name: Validate local asset references
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          readme = Path("README.md").read_text(encoding="utf-8")
+          refs = set(re.findall(r'(?:src|href)="(\./[^"]+)"', readme))
+          refs |= set(re.findall(r'(?<!\!)\[[^\]]+\]\((\./[^)]+)\)', readme))
+
+          missing = []
+          for ref in sorted(refs):
+              path = Path(ref[2:])
+              if "ADD " in ref:
+                  continue
+              if not path.exists():
+                  missing.append(ref)
+
+          if missing:
+              print("Missing local references:")
+              print("\n".join(missing))
+              sys.exit(1)
+
+          forbidden = ["github.com/yashalshende", "ADD FAKE", "FAKE METRIC"]
+          bad = [x for x in forbidden if x in readme]
+          if bad:
+              print("Forbidden placeholder/reference found:", bad)
+              sys.exit(1)
+
+          print("Profile validation passed.")
+          PY

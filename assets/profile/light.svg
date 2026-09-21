@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330" role="img" aria-labelledby="title desc">
+<title id="title">Gaurav Shelke AI Engineering Command Center</title>
+<desc id="desc">Software Engineer and AI/ML engineer command-center profile banner.</desc>
+<defs>
+  <linearGradient id="g" x1="0" x2="1"><stop stop-color="#55e6ff"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#d9e4e9" stroke-width="1"/></pattern>
+</defs>
+<rect width="1000" height="330" rx="22" fill="#f7fafc"/>
+<rect width="1000" height="330" rx="22" fill="url(#grid)" opacity=".55"/>
+<circle cx="70" cy="55" r="2" fill="#55e6ff" opacity=".7"/>
+<circle cx="180" cy="120" r="1.5" fill="#55e6ff" opacity=".7"/>
+<circle cx="820" cy="55" r="2" fill="#55e6ff" opacity=".7"/>
+<circle cx="940" cy="140" r="1.5" fill="#55e6ff" opacity=".7"/>
+<circle cx="720" cy="120" r="1.2" fill="#55e6ff" opacity=".7"/>
+<circle cx="380" cy="50" r="1.2" fill="#55e6ff" opacity=".7"/>
+
+<rect x="28" y="24" width="944" height="282" rx="16" fill="none" stroke="#d9e4e9"/>
+<text x="55" y="58" fill="#52636d" font-family="monospace" font-size="14">profile.sh --live</text>
+<circle cx="166" cy="53" r="5" fill="#4ade80"/>
+<text x="180" y="58" fill="#4ade80" font-family="monospace" font-size="13">LIVE</text>
+<text x="55" y="90" fill="#55e6ff" font-family="monospace" font-size="12">VISUAL.MAP</text>
+<text x="500" y="145" text-anchor="middle" fill="#10202b" font-family="Arial, sans-serif" font-size="43" font-weight="700">GAURAV SHELKE</text>
+<text x="500" y="177" text-anchor="middle" fill="url(#g)" font-family="monospace" font-size="19" font-weight="700">SOFTWARE ENGINEER • AI/ML</text>
+<text x="500" y="207" text-anchor="middle" fill="#52636d" font-family="monospace" font-size="13">AI ENGINEERING   •   BACKEND   •   FULL STACK</text>
+<text x="55" y="247" fill="#52636d" font-family="monospace" font-size="12">STATUS .........</text>
+<text x="170" y="247" fill="#10202b" font-family="monospace" font-size="12">BUILDING + LEARNING + SHIPPING</text>
+<text x="55" y="270" fill="#52636d" font-family="monospace" font-size="12">CORE.LANG ......</text>
+<text x="170" y="270" fill="#10202b" font-family="monospace" font-size="12">PYTHON • JAVA • TYPESCRIPT</text>
+<text x="55" y="293" fill="#52636d" font-family="monospace" font-size="12">CORE.AI ........</text>
+<text x="170" y="293" fill="#10202b" font-family="monospace" font-size="12">ML • RAG • COMPUTER VISION</text>
+<text x="605" y="247" fill="#52636d" font-family="monospace" font-size="12">CORE.BACKEND ...</text>
+<text x="730" y="247" fill="#10202b" font-family="monospace" font-size="12">FASTAPI • FLASK • SPRING</text>
+<text x="605" y="270" fill="#52636d" font-family="monospace" font-size="12">CORE.DATA ......</text>
+<text x="730" y="270" fill="#10202b" font-family="monospace" font-size="12">POSTGRES • MYSQL • REDIS</text>
+</svg>
